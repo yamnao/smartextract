@@ -1,0 +1,26 @@
+{
+    "id": "AC3AB76F",
+    "path": "~/SMART_Surveys_App/smartextract/R/extract_infos.R",
+    "project_path": "R/extract_infos.R",
+    "type": "r_source",
+    "hash": "194398347",
+    "contents": "",
+    "dirty": false,
+    "created": 1715616395039.0,
+    "source_on_save": false,
+    "relative_order": 3,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "59,1",
+        "scrollLine": "52"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1715962948,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1715962948449,
+    "read_only": false,
+    "read_only_alternatives": []
+}

@@ -1,0 +1,26 @@
+{
+    "id": "0DB22405",
+    "path": "~/SMART_Surveys_App/smartextract/R/deal_with_issue_data.R",
+    "project_path": "R/deal_with_issue_data.R",
+    "type": "r_source",
+    "hash": "1268173904",
+    "contents": "",
+    "dirty": false,
+    "created": 1715961311346.0,
+    "source_on_save": false,
+    "relative_order": 6,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "16,25",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1715962723,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1715962723976,
+    "read_only": false,
+    "read_only_alternatives": []
+}
