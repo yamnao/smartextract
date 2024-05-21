@@ -13,5 +13,5 @@ status](https://github.com/afyac/mast/workflows/R-CMD-check/badge.svg)](https://
 To install `mast`:
 
 ``` r
-remotes::install_github("afyac/mast", upgrade = FALSE)
+remotes::install_github("yamnao/smartextract", upgrade = FALSE)
 ```
