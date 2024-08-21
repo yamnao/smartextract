@@ -57,6 +57,9 @@ f_extract_mortality_data <- function(smart_content, type_survey){
 f_extract_clusters_data <- function(smart_content){
   pos <- grep("Cluster", smart_content, ignore.cas=TRUE)[2]
   pos2 <- grep("\\Training_new:", smart_content, ignore.cas=TRUE, useBytes = TRUE)
+  if(length(pos2) == 0){
+    return(data.frame())
+  }
   clusters_data <- smart_content[(pos+10):(pos2-1)]
   clusters_data<- strsplit(clusters_data, split = "\t")
   clusters_data <- lapply(clusters_data, `length<-`, max(lengths(clusters_data)))
@@ -66,7 +69,9 @@ f_extract_clusters_data <- function(smart_content){
   }
   colnames(clusters_data) <- c('settlements', 'pop', 'nb_cluster')
   clusters_data <- dplyr::select(clusters_data, c('settlements', 'nb_cluster'))
-  clusters_data[which(clusters_data$nb_cluster == ""),]$nb_cluster <- NA
+  if(length(clusters_data[which(clusters_data$nb_cluster == ""),]$nb_cluster)!= 0){
+    clusters_data[which(clusters_data$nb_cluster == ""),]$nb_cluster <- NA
+  }
   clusters_data <- tidyr::drop_na(clusters_data)
   clusters_data$settlements <- tolower(clusters_data$settlements)
   clusters_data$settlements <- stringr::str_replace_all(clusters_data$settlements , "[[:punct:]]", "")
