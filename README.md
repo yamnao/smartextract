@@ -10,7 +10,7 @@ status](https://github.com/afyac/mast/workflows/R-CMD-check/badge.svg)](https://
 
 ## Installation
 
-To install `mast`:
+To install `smartextract`:
 
 ``` r
 remotes::install_github("yamnao/smartextract", upgrade = FALSE)
