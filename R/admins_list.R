@@ -10,7 +10,7 @@ f_location_possibility <- function(country ='SOM'){
       dplyr::mutate(eventual_name = tolower(gsub("[[:punct:]]+", "", eventual_name)))
     return(data)
   }else if(country == 'KEN'){
-    data <- rio::import('data/ken_admins_options.rda') |>
+    data <- smartextract::ken_admins_options |>
       dplyr::mutate(eventual_name = tolower(gsub("[[:punct:]]+", "", iconv(eventual_name,"WINDOWS-1252","UTF-8"))))
     return(data)
   }else{
