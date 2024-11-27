@@ -35,10 +35,15 @@ f_plot_log_file <- function(log_file){
     ggplot2::labs(title = "Percentage of issues raised when extracting SMART contents.", fill = "Issues found:") +
     ggplot2::scale_fill_manual(values = c("FALSE" = "#56B4E9", "TRUE" = "#E69F00"))
 
-  log_file$min_year_survey <- as.numeric(lubridate::year(as.Date(paste0(log_file$min_year_survey, '/', log_file$min_month_survey, '/', log_file$min_day_survey))))
+  log_file$min_year_survey <- as.Date(paste0(log_file$min_year_survey, "-01-01"))
   plot3 <- ggplot2::ggplot(data = log_file, ggplot2::aes(min_year_survey))+
     ggplot2::geom_histogram(fill="#009E73")+
     ggplot2::theme_bw() +
+    ggplot2::scale_x_date(
+      date_breaks = "1 year",
+      date_labels = "%Y",
+      name = "Year"
+    ) +
     ggplot2::labs(x=ggplot2::element_blank(), y=ggplot2::element_blank(),
                   title='Analysis of SMART survey content extracted per year.')
 
